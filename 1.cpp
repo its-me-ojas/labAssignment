@@ -19,22 +19,24 @@ void display(int arr[], int size) {
 
 void insert(int arr[], int index, int value, int &size) {
 
+  // std::cout << "Size before:" << size << std::endl;
   if ((index > size) || (index < 0)) {
     std::cout << "Can't insert element at that index" << std::endl;
     return;
   }
-  for (size_t i = size - 1; i >= index; i--) {
-    arr[i + 1] = arr[i];
+  for (size_t i = size; i > index; i--) {
+    arr[i] = arr[i - 1];
   }
   arr[index] = value;
   size++;
+  // std::cout << "Size after:" << size << std::endl;
   std::cout << "Value is inserted" << std::endl;
   display(arr, size);
 }
 
 void deleteElement(int arr[], int index, int &size) {
-  if (index < 0) {
-    std::cout << "Cannot deleted element from that index" << std::endl;
+  if (index < 0 || index >= size) {
+    std::cout << "Cannot delete element from that index" << std::endl;
     return;
   }
   for (size_t i = index; i < size; i++) {
@@ -57,15 +59,15 @@ int main() {
   int arr[100] = {10, 20, 30, 40, 50};
   int size = 5;
   int index, value;
-  std::cout << "1.Create\n"
-            << "2.Display\n"
-            << "3.Insert\n"
-            << "4.Delete\n"
-            << "5.Linear Search\n"
-            << "6.Exit" << std::endl;
-  int choice;
   int c = 0;
   while (c == 0) {
+    std::cout << "1.Create\n"
+              << "2.Display\n"
+              << "3.Insert\n"
+              << "4.Delete\n"
+              << "5.Linear Search\n"
+              << "6.Exit" << std::endl;
+    int choice;
     std::cin >> choice;
     switch (choice) {
     case 1:

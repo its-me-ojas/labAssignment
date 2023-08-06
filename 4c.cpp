@@ -54,5 +54,16 @@ int main() {
     }
     std::cout << std::endl;
   }
+  // Free the dynamically allocated memory
+  for (size_t i = 0; i < rows; i++) {
+    delete[] arr[i];
+  }
+  delete[] arr;
+
+  for (size_t i = 0; i < rows; i++) {
+    delete[] trans[i];
+  }
+  delete[] trans;
+
   return 0;
 }

@@ -1,6 +1,8 @@
+// Write a program to concatenate one string to another string.
 #include <iostream>
 #include <string>
 int main() {
+
   std::string str1, str2;
   std::cout << "enter string 1 : ";
   std::getline(std::cin, str1);

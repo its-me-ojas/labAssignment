@@ -1,4 +1,4 @@
-#include <fstream>
+// Write a program to reverse a string.
 #include <iostream>
 #include <string>
 

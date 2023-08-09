@@ -7,11 +7,15 @@
 void bubbleSort(int arr[], int size) {
 
   for (size_t i = 0; i < size - 1; i++) {
+    int c = 0;
     for (size_t j = 0; j < size - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         std::swap(arr[j], arr[j + 1]);
+        c++;
       }
     }
+    if (c == 0)
+      return;
   }
 }
 

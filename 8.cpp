@@ -14,6 +14,25 @@ int distinctElements(int arr[], int size) {
   return distinct.size();
 }
 
+// int distinctElements(int arr[], int n) {
+//   int distinctCount = 0;
+
+//   for (int i = 0; i < n; ++i) {
+//     bool isDistinct = true;
+//     for (int j = 0; j < i; ++j) {
+//       if (arr[i] == arr[j]) {
+//         isDistinct = false;
+//         break;
+//       }
+//     }
+//     if (isDistinct) {
+//       distinctCount++;
+//     }
+//   }
+
+//   return distinctCount;
+// }
+
 int main() {
 
   int arr[] = {1, 1, 1, 1, 2, 4, 5, 5, 6, 6, 3, 3, 8, 9, 7, 7};

@@ -3,8 +3,9 @@
 #include <iostream>
 #include <stack>
 
-void reverseString(std::stack<char> stk, std::string mainString,
-                   std::string &reverse) {
+void reverseString(std::string mainString, std::string &reverse) {
+  std::stack<char> stk;
+
   for (size_t i = 0; i < mainString.length(); i++)
     // for pushing the string on to the stack
     stk.push(mainString[i]);
@@ -20,9 +21,8 @@ int main() {
 
   std::string str = "DataStructure";
   std::string revstr = str;
-  std::stack<char> stk;
   std::cout << str << std::endl;
-  reverseString(stk, str, revstr);
+  reverseString(str, revstr);
   std::cout << revstr << std::endl;
   return 0;
 }

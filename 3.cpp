@@ -18,7 +18,6 @@ bool areParenthesesBalanced(const std::string &expression) {
 
       char top = parenthesesStack.top();
       parenthesesStack.pop();
-      std::cout << ch << "," << top << std::endl;
       if ((ch == ')' && top != '(') || (ch == ']' && top != '[') ||
           (ch == '}' && top != '{')) {
         return false; // Mismatched parentheses

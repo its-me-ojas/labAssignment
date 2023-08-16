@@ -14,9 +14,9 @@ int distinctElements(int arr[], int size) {
   return distinct.size();
 }
 
-// int distinctElements(int arr[], int n) {
+// Explaination: We will use loops to check the past elements rather than
+// checking the future elements int distinctElements(int arr[], int n) {
 //   int distinctCount = 0;
-
 //   for (int i = 0; i < n; ++i) {
 //     bool isDistinct = true;
 //     for (int j = 0; j < i; ++j) {
